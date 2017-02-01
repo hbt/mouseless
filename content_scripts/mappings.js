@@ -900,11 +900,12 @@ Mappings.insertFunctions = (function() {
       return element;
     },
     editWithVim: function() {
-      var text = element.value.substr(0, element.selectionStart)
+      var value = element.value || element.innerHTML;
+      var text = value.substr(0, element.selectionStart);
       var line = 1 + text.replace(/[^\n]/g, "").length;
       var column = 1 + text.replace(/[^]*\n/, "").length;
       PORT('editWithVim', {
-        text: element.value || element.innerHTML,
+        text: value,
         line: line,
         column: column
       });
