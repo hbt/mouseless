@@ -6,6 +6,7 @@ link:index.html[Home]
 
 == Mouseless Changelog
 
+## 1.4.7
 
 ## 1.4.6
 
